@@ -1,27 +1,28 @@
 :root {
-    --color-background: #1f2a38;;
+    --color-background: #1f2a38;
+    ;
     --color-background2: #34495e;
     --color-background3: #2c3e50;
 
-    --color-white:#fff;
-    --color-light:rgba(255,255,255,.7);
-    --color-black:#000;
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, .7);
+    --color-black: #000;
 
     --color-primary: #3498db;
-    --color-success:#27ae60;
-    --color-warning:#f39c12;
-    --color-danger:#aa2d20;
-    --color-danger-darker:#f757426b;
+    --color-accent: #039be5;
+    --color-success: #27ae60;
+    --color-warning: #f39c12;
+    --color-danger: #aa2d20;
+    --color-danger-darker: #f757426b;
 
     --transition: all .4s ease;
 
-    --container-lg: 86%;
+    --container-lg: 80%;
     --container-md: 90%;
     --container-sm: 96%;
-
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -31,17 +32,142 @@
     list-style: none;
 }
 
-body{
+body {
+    color: var(--color-white);
+    background-color: var(--color-background);
     font-family: "Poppins", sans-serif;
 }
 
-.container{
+a {
+    color: var(--color-white);
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.container {
     width: var(--container-lg);
     margin: 0 auto;
 }
 
+.btn {
+    color: var(--color-black);
+    background-color: var(--color-accent);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    border-radius: .3rem;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.btn:hover {
+    color: var(--color-primary);
+    background-color: transparent;
+    border-color: var(--color-accent);
+}
+
+.btn-primary {
+    color: var(--color-light);
+    background-color: var(--color-danger);
+}
 
 /* =========START SECTION NAVBAR========= */
+nav {
+    width: 100vw;
+    height: 3rem;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: transparent;
+}
 
+nav button {
+    display: none;
+}
 
-/* =========END SECTION NAVBAR========= */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.navbar a {
+    transition: var(--color-accent);
+}
+
+.navbar a:hover {
+    color: var(--color-background2);
+}
+
+/* =========END OF SECTION NAVBAR========= */
+/* =========START SECTION HEADER========= */
+header {
+    height: 69vh;
+    top: 4.5rem;
+    position: relative;
+    margin-bottom: 6rem;
+    overflow: hidden;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+}
+
+.header-left p {
+    margin: 1rem .3rem 2.1rem;
+}
+
+/* =========END OF SECTION HEADER========= */
+/* =========START SECTION CATEGORIES========= */
+.categories{
+     height: 33vh;
+    background-color: var(--color-background2);
+}
+
+.categories-container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+/* =========END OF SECTION CATEGORIES========= */
