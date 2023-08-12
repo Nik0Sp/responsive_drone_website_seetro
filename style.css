@@ -46,12 +46,18 @@ h1 {
     font-size: 2.6rem;
 }
 
+h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+
+}
+
 h3 {
     font-size: 1.8rem;
 }
 
 h4 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
 small {
@@ -108,7 +114,7 @@ section h2 {
 /* =========START SECTION NAVBAR========= */
 nav {
     width: 100vw;
-    height: 3rem;
+    height: 5rem;
     padding: 1rem 0;
     position: fixed;
     top: 0;
@@ -140,6 +146,12 @@ nav button {
 
 .navbar a:hover {
     color: var(--color-background2);
+}
+
+.scroll {
+    background-color: var(--color-accent);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+
 }
 
 /* =========END OF SECTION NAVBAR========= */
@@ -188,7 +200,6 @@ header {
     padding: .9rem;
     border-radius: .6rem;
     border: 1px solid transparent;
-    cursor: default;
     box-shadow: 0px 4px 3px var(--color-accent);
 }
 
@@ -267,13 +278,13 @@ header {
     overflow: hidden;
     border: 2px solid transparent;
     transition: var(--transition);
-    cursor: pointer;
     background-color: var(--color-background2);
 }
 
 .product:hover {
     border-color: var(--color-accent);
     background-color: transparent;
+    opacity: .8;
 }
 
 .product-info {
@@ -285,3 +296,87 @@ header {
 }
 
 /* =========END OF SECTION PRODUCTS========= */
+/* =========START SECTION FAQs========= */
+.faqs {
+    background-color: var(--color-background2);
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.faqs-container {
+    display: grid;
+    transition: var(--transition);
+    max-width: 800px;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.faq {
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    padding: 2rem;
+    border-radius: .9rem;
+    max-width: 960px;
+}
+
+.faq h4 {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    align-self: flex-start;
+
+}
+
+.faq p {
+    margin-top: .8rem;
+    display: none;
+    color: var(--color-light);
+}
+
+.faq.open p {
+    display: flex;
+
+}
+
+/* =========END OF SECTION FAQs========= */
+/* =========START SECTION TESTIMONIALS========= */
+.testimonials-container {
+    position: relative;
+    overflow-x: hidden;
+    margin-bottom: 3rem;
+}
+
+.testimonial {
+    padding-top: 2rem;
+    border-radius: .6rem;
+}
+
+.avatar {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: .6rem solid var(--color-background2);
+}
+
+.testimonial-info {
+    text-align: center;
+}
+
+.testimonial-body {
+    padding: 1rem;
+    position: block;
+    background-color: var(--color-primary);
+    border-radius: .6rem;
+    margin-top: .5rem;
+
+}
+
+/* =========END OF SECTION TESTIMONIALS========= */
