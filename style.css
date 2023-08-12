@@ -63,7 +63,6 @@ h4 {
 small {
     color: var(--color-warning);
     opacity: .6;
-
 }
 
 
@@ -380,3 +379,62 @@ header {
 }
 
 /* =========END OF SECTION TESTIMONIALS========= */
+/* =========START SECTION FOOTER========= */
+footer {
+    background-color: var(--color-background2);
+    padding-top: 6rem;
+    font-size: .9rem;
+}
+
+footer ul li{
+    margin-bottom: .9rem;
+}
+
+footer ul li:hover{
+    opacity: .3;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+}
+
+.footer-container div h4{
+    margin-bottom: .6rem;
+    opacity: .8;
+}
+
+.footer-1 p{
+    margin-bottom: 2rem;
+}
+
+.footer-2  ul{
+    text-transform: uppercase;
+}
+
+.footer-socials{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-copyright{
+    text-align: center;
+    font-size: .9rem;
+    padding: .5rem;
+    border-top: 1px solid var(--color-background3);
+}
+
+/* =========END OF SECTION FOOTER========= */
+/* =========MEDIA QUERIES (TABLETS)========= */
+@media screen and (max-width:1024px){
+
+}
+
+
+/* =========MEDIA QUERIES (PHONES)========= */
+@media screen and (max-width:600px){
+    
+}
