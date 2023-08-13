@@ -1,5 +1,145 @@
 /* =====START SECTION ACHIEVEMENTS===== */
 
-.about-achievements{
+.about-achievements {
     margin-top: 3rem;
+}
+
+.achievements-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 3rem;
+}
+
+.achievements-right p {
+    margin: 1.5rem 0 2.1rem;
+}
+
+.achievements-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    text-align: center;
+    background-color: var(--color-background2);
+    padding: 1.5rem;
+    border-radius: .9rem;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.achievement-card:hover {
+    background-color: var(--color-background3);
+    border-color: var(--color-accent);
+}
+
+.achievement-icon {
+    display: inline-block;
+    font-size: 2rem;
+    background-color: var(--color-danger);
+    padding: .3rem .6rem;
+    border-radius: .9rem;
+    margin-bottom: 1rem;
+}
+
+.achievement-card:nth-child(2) .achievement-icon {
+    background-color: var(--color-success);
+
+}
+
+.achievement-card:nth-child(3) .achievement-icon {
+    background-color: var(--color-primary);
+}
+
+
+/* =====END OF SECTION ACHIEVEMENTS===== */
+/* =====START SECTION TEAM===== */
+.team {
+    background-color: var(--color-background2);
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.team-member {
+    position: relative;
+    overflow: hidden;
+    border-radius: .6rem;
+    transition: var(--transition);
+    padding: 1rem;
+    background-color: var(--color-background3);
+    border: 1px solid transparent;
+}
+
+.team-member:hover {
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+.team-member-image img {
+    border-radius: .6rem;
+    filter: saturate(0);
+}
+
+.team-member-image:hover img {
+    filter: saturate(1);
+}
+
+
+
+.team-member-description {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.team-member-description p {
+    color: var(--color-warning);
+    filter: saturate(0);
+
+}
+
+.team-member:hover p {
+    filter: saturate(1);
+}
+
+.team-member-info {
+    background-color: var(--color-primary);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 .6rem .6rem;
+    padding: 1rem;
+    transition: var(--transition);
+    top: -100%;
+}
+
+.team-member-info a {
+    padding: 1rem;
+}
+
+.team-member:hover .team-member-info {
+    top: 0;
+}
+
+/* =====END OF SECTION TEAM===== */
+/* =====MEDIA QUERIES (TABLETS)===== */
+
+@media screen and (max-width:1024px) {
+    .about-achievements{
+        
+    }
+}
+
+/* =====MEDIA QUERIES (PHONES)===== */
+
+@media screen and (max-width:600px) {
+    
 }
