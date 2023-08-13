@@ -17,7 +17,7 @@
 
     --transition: all .4s ease;
 
-    --container-lg: 80%;
+    --container-lg: 86%;
     --container-md: 90%;
     --container-sm: 96%;
 }
@@ -73,7 +73,8 @@ img {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 3rem 0;
+    margin-bottom: 6rem;
 }
 
 section h2 {
@@ -159,8 +160,9 @@ header {
     height: 69vh;
     top: 4.5rem;
     position: relative;
-    margin-bottom: 6rem;
     overflow: hidden;
+    margin-bottom: 6rem;
+
 }
 
 .header-container {
@@ -176,15 +178,17 @@ header {
 
 /* =========END OF SECTION HEADER========= */
 /* =========START SECTION CATEGORIES========= */
+.categories-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin-bottom: 13rem;
+}
+
 .categories {
     height: 33rem;
     background-color: var(--color-background2);
 }
 
-.categories-container {
-    display: grid;
-    grid-template-columns: 70% 30%;
-}
 
 .categories-left {
     display: grid;
@@ -254,6 +258,11 @@ header {
     text-align: center;
 }
 
+.categories-right h2 {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
 .categories-right .btn {
     margin-top: 2rem;
 }
@@ -262,6 +271,7 @@ header {
 /* =========START SECTION PRODUCTS========= */
 .products {
     margin-top: 9rem;
+    padding-top: 6rem;
 }
 
 
@@ -278,6 +288,14 @@ header {
     border: 2px solid transparent;
     transition: var(--transition);
     background-color: var(--color-background2);
+    padding: 1rem;
+}
+
+.product h4{
+    margin: 1rem 0 .6rem 0;
+}
+.product p{
+    margin-bottom: 1rem;
 }
 
 .product:hover {
@@ -290,9 +308,7 @@ header {
     padding: 2rem;
 }
 
-.product-info p {
-    margin: .9rem 0 2rem;
-}
+
 
 /* =========END OF SECTION PRODUCTS========= */
 /* =========START SECTION FAQs========= */
@@ -386,11 +402,11 @@ footer {
     font-size: .9rem;
 }
 
-footer ul li{
+footer ul li {
     margin-bottom: .9rem;
 }
 
-footer ul li:hover{
+footer ul li:hover {
     opacity: .3;
 }
 
@@ -400,27 +416,30 @@ footer ul li:hover{
     gap: 6rem;
 }
 
-.footer-container div h4{
+.footer-container div h4 {
     margin-bottom: .6rem;
     opacity: .8;
 }
 
-.footer-1 p{
+.footer-1 p {
     margin-bottom: 2rem;
+    font-size: .8rem;
+    opacity: .7;
+    cursor: default;
 }
 
-.footer-2  ul{
+.footer-2 ul {
     text-transform: uppercase;
 }
 
-.footer-socials{
+.footer-socials {
     font-size: 1.5rem;
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.footer-copyright{
+.footer-copyright {
     text-align: center;
     font-size: .9rem;
     padding: .5rem;
@@ -429,12 +448,192 @@ footer ul li:hover{
 
 /* =========END OF SECTION FOOTER========= */
 /* =========MEDIA QUERIES (TABLETS)========= */
-@media screen and (max-width:1024px){
+@media screen and (max-width:1200px) {
+    .categories {
+        height: 45rem;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: var(--container-md);
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* =========SECTION OF NAVBAR========= */
+    nav button {
+        display: inline-block;
+        background-color: transparent;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--color-white);
+    }
+
+    nav button#close-nav {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        flex-direction: column;
+        height: fit-content;
+        width: 15rem;
+        top: 6rem;
+        right: 3rem;
+        gap: 0;
+        display: none;
+        border-radius: .6rem;
+        overflow: hidden;
+    }
+
+    .navbar li {
+        height: 6rem;
+        width: 100%;
+        transform-origin: top right;
+        animation: aniNavbar .3s linear forwards;
+    }
+
+    .navbar li a {
+        height: 100%;
+        width: 100;
+        display: grid;
+        background-color: var(--color-primary);
+        place-items: center;
+    }
+
+    .navbar li a:hover {
+        background-color: var(--color-background3);
+        color: var(--color-white);
+    }
+
+    /* =========SECTION OF HEADER========= */
+    header {
+        height: 55vh;
+        margin-top: 3rem;
+    }
+
+    .header-container {
+        padding-bottom: 3rem;
+        gap: 0;
+    }
+
+    .header-left p {
+        font-size: .9rem;
+    }
+
+    /* =========SECTION OF CATEGORIES========= */
+    .categories {
+        height: auto;
+    }
+
+    .categories-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .categories-right {
+        margin-left: 0;
+    }
+
+    /* =========SECTION OF PRODUCTS========= */
+
+    .products {
+        margin-top: 0;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* =========SECTION OF FOOTER========= */
+
+    footer {
+        padding-top: 3rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
 
 /* =========MEDIA QUERIES (PHONES)========= */
-@media screen and (max-width:600px){
-    
+@media screen and (max-width:600px) {
+    .container {
+        width: var(--container-sm);
+    }
+
+
+    .nav-container {
+        margin-right: 1rem;
+    }
+
+    /* =========SECTION OF HEADER========= */
+    header {
+        height: 90vh;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header-left p {
+        margin-bottom: 1rem;
+    }
+
+    /* =========SECTION OF CATEGORIES========= */
+    .categories-left {
+        grid-template-columns: 1fr 1fr;
+        gap: .6rem;
+    }
+
+    .category-icon {
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+
+    /* =========SECTION OF PRODUCTS========= */
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* =========SECTION OF FOOTER========= */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .categories-left {
+        grid-template-columns: 1fr;
+    }
+
 }

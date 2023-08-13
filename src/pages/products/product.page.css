@@ -1,3 +1,7 @@
+.products {
+    margin-top: 0;
+}
+
 .product {
     position: relative;
 }
@@ -22,31 +26,30 @@
     transition: var(--transition);
 }
 
-.product-info div
-{
+.product-info div {
     margin: 1rem;
     position: relative;
     width: 100%;
 }
 
-.product-info div i{
+.product-info div i {
     color: var(--color-success);
     font-size: 3rem;
-    margin-right:2rem ;
+    margin-right: 2rem;
     position: absolute;
     left: -2rem;
     bottom: -1rem;
 }
 
-.product-info div:nth-child(2) i{
+.product-info div:nth-child(2) i {
     color: var(--color-warning);
     font-size: 2rem;
-    margin-right:2rem ;
+    margin-right: 2rem;
     bottom: -.0rem;
 }
 
-.product-info div small{
-color: var(--color-black);
-font-size: 1rem;
-padding-bottom: 1rem;
+.product-info div small {
+    color: var(--color-black);
+    font-size: 1rem;
+    padding-bottom: 1rem;
 }
