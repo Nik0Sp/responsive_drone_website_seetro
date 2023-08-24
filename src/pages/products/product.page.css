@@ -40,6 +40,10 @@
     left: -2rem;
     bottom: -1rem;
 }
+.product-info div:nth-child(1) i {
+    color: var(--color-accent);
+   
+}
 
 .product-info div:nth-child(2) i {
     color: var(--color-warning);

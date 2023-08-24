@@ -24,7 +24,7 @@
 /*=============== SCROLL BAR ===============*/
 
 ::-webkit-scrollbar{
-    width: .6rem;
+    width: .3rem;
     background-color:var(--color-background2);
 }
 
@@ -96,6 +96,27 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 3rem;
+}
+.heading-link{
+    text-align: center;
+    background: url(/src/assets/slide-02.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 5rem;
+    box-shadow: inset 0px 0 .4rem .3rem rgba(0, 0, 0, 0.8),  inset 0px  .3rem .3rem rgba(0, 0, 0, 0.8);
+
+}
+
+.heading-link h3{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+.heading-link p{
+    color: var(--color-light);
+}
+
+.heading-link a{
+    color: var(--color-accent);
 }
 
 .container {
@@ -173,19 +194,30 @@ nav button {
 /* =========END OF SECTION NAVBAR========= */
 /* =========START SECTION HEADER========= */
 header {
-    height: 69vh;
-    top: 4.5rem;
+    top: 0;
+    left: 0;
     position: relative;
-    overflow: hidden;
     margin-bottom: 6rem;
+    padding: 0;
+    margin: 0;
+    height: 39rem;
+    overflow: hidden;
 
 }
 
-.header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+header .swiper{
+    width: 100%;
+    height: 100%;
+}
+
+header .slide{
+    display: flex;
     align-items: center;
-    gap: 5rem;
+    background-size: cover !important;
+    padding:  6rem;
+
+
+
 }
 
 .header-left p {
@@ -476,6 +508,10 @@ footer ul li:hover {
         width: var(--container-md);
     }
 
+    .heading-link h3{
+        font-size: 2rem;
+    }
+
     h1 {
         font-size: 2.1rem;
     }
@@ -503,6 +539,11 @@ footer ul li:hover {
 
     nav button#close-nav {
         display: none;
+    }
+
+    section{
+        padding: 2rem 0;
+        margin: 0;
     }
 
     .navbar {
@@ -540,14 +581,18 @@ footer ul li:hover {
 
     /* =========SECTION OF HEADER========= */
     header {
-        height: 55vh;
-        margin-top: 3rem;
+        height: 30rem;
+    }
+
+    header img{
+        display: none;
     }
 
     .header-container {
-        padding-bottom: 3rem;
         gap: 0;
     }
+
+    
 
     .header-left p {
         font-size: .9rem;
@@ -592,13 +637,19 @@ footer ul li:hover {
 
 /* =========MEDIA QUERIES (PHONES)========= */
 @media screen and (max-width:600px) {
+
+    section {
+        margin: 0;
+    }
+
     .container {
         width: var(--container-sm);
     }
 
 
     .nav-container {
-        margin-right: 1rem;
+        right: 3rem;
+
     }
 
     /* =========SECTION OF HEADER========= */

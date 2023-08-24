@@ -6,6 +6,9 @@ window.addEventListener("scroll",()=>{
 })
 
 
+
+
+
 //show/hide navbar menu
 const menu = document.querySelector(".navbar");
 const menuBtn = document.querySelector("#open-nav");
@@ -41,10 +44,41 @@ faqs.forEach(faq=>{
 
         // icon change
         const icon = faq.querySelector(".faq-icon i");
-        if(icon.className == "uil uil-plus"){
-            icon.className = "uil uil-minus"
+        if(icon.className == "uil uil-angle-up"){
+            icon.className = "uil uil-angle-down"
         }else{
-            icon.className = "uil uil-plus"
+            icon.className = "uil uil-angle-up"
         }
     })
 })
+
+
+//swiper 
+
+let headerSwiper = new Swiper(".header-container", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable:true,
+    },
+    loop:true,
+    grabCursor:true,
+  });
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop:true,
+    grabCursor:true,
+    //when window width is >= 600px
+    breakpoints: {
+      600: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
