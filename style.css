@@ -638,6 +638,10 @@ footer ul li:hover {
 /* =========MEDIA QUERIES (PHONES)========= */
 @media screen and (max-width:600px) {
 
+    header .slide{
+        padding: 1rem;
+    }
+
     section {
         margin: 0;
     }
