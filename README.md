@@ -13,7 +13,7 @@
 
 To get started with the Seetro Responsive Drone Website, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone the repository: `git clone https://github.com/Nik0Sp/responsive_drone_website_seetro.git`
 2. Open the project folder.
 3. Open the `index.html` file in your web browser to explore the website.
 
